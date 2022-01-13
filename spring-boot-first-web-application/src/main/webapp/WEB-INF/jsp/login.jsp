@@ -3,6 +3,12 @@
 <title>First Web Application</title>
 </head>
 <body>
-My First Jsp. Welcome ${name}!
+<font color="red">${errorMessage }</font>
+<form method="post">
+Name : <input type="text" name="name">
+pass : <input type="password" name="pass">
+<input type="submit">
+
+</form>
 </body>
 </html>
