@@ -8,7 +8,7 @@ public class ToDo {
 	private String user;
 	private String desc;
 	private Date targetDate;
-	private boolean isDone;
+	private boolean done;
 
 	public ToDo(int id, String user, String desc, Date targetDate, boolean isDone) {
 		super();
@@ -16,7 +16,7 @@ public class ToDo {
 		this.user = user;
 		this.desc = desc;
 		this.targetDate = targetDate;
-		this.isDone = isDone;
+		this.done = isDone;
 	}
 
 	public int getId() {
@@ -52,17 +52,17 @@ public class ToDo {
 	}
 
 	public boolean isDone() {
-		return isDone;
+		return done;
 	}
 
 	public void setDone(boolean isDone) {
-		this.isDone = isDone;
+		this.done = isDone;
 	}
 
 	@Override
 	public String toString() {
 		return "ToDo [id=" + id + ", user=" + user + ", desc=" + desc + ", targetDate=" + targetDate + ", isDone="
-				+ isDone + "]";
+				+ done + "]";
 	}
 
 }
