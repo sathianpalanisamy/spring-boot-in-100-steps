@@ -23,7 +23,18 @@ public class ToDoService {
 	}
 
 	public List<ToDo> retrieveTodos(String user) {
+		System.out.println(user);
 		return todos.stream().filter(a -> a.getUser().equals(user)).collect(Collectors.toList());
+	}
+	
+	public ToDo retrieveTodoById(int id) {
+		return todos.stream().filter(a -> a.getId()==(id)).findAny().get();
+	}
+	
+	public void updateTodo(ToDo todo) {
+		todos.remove(todo);
+		todos.add(todo);
+		
 	}
 
 	public void addTodo(String user, String desc, Date targetDate, boolean isDone) {
